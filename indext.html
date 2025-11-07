@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fitness Studio</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/script.js" defer></script>
+    <!-- ✅ Internal CSS (from style.css) -->
+  <style>
+   
+    body {
+      scroll-behavior: smooth;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    h1, h2 {
+      font-weight: 600;
+    }
+
+    section {
+      padding-top: 80px;
+      padding-bottom: 80px;
+    }
+
+    .navbar {
+      box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    }
+
+    .card img {
+      height: 300px;
+      object-fit: cover;
+    }
+
+    footer {
+      background-color: #111;
+      color: #fff;
+    }
+
+    .btn-primary {
+      background-color: #ff6600;
+      border: none;
+    }
+
+    .btn-primary:hover {
+      background-color: #e65c00;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 🔗 NAVBAR -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="#">Fitness Studio</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#trainers">Trainers</a></li>
+          <li class="nav-item"><a class="nav-link" href="#schedule">Schedule</a></li>
+          <li class="nav-item"><a class="nav-link" href="#register">Register</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- 🏠 HOME SECTION -->
+  <section id="home" class="pt-5 mt-5 text-center">
+    <div class="container mt-5">
+      <h1>Welcome to Fitness Studio</h1>
+      <p>Your journey to a healthier life starts here!</p>
+      <a href="#register" class="btn btn-primary">Join a Free Trial</a>
+    </div>
+  </section>
+
+  <hr class="my-5">
+
+  <!-- 💪 TRAINERS SECTION -->
+  <section id="trainers" class="pt-5">
+    <div class="container">
+      <h2 class="text-center mb-4">Meet Our Trainers</h2>
+      <div class="row">
+        <div class="col-md-4">
+          <div class="card">
+            <img src="C:\Users\akim\OneDrive\web design\fitnessStudio/alex.png" class="card-img-top" alt="Trainer 1">
+            <div class="card-body">
+              <h5 class="card-title">Alex</h5>
+              <p class="card-text">Yoga & Flexibility Expert</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card">
+            <img src="C:\Users\akim\OneDrive\web design\fitnessStudio/maria.png" class="card-img-top" alt="Trainer 2">
+            <div class="card-body">
+              <h5 class="card-title">Maria</h5>
+              <p class="card-text">Strength & Conditioning Coach</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card">
+            <img src="C:\Users\akim\OneDrive\web design\fitnessStudio/daniel.png" class="card-img-top" alt="Trainer 3">
+            <div class="card-body">
+              <h5 class="card-title">Daniel</h5>
+              <p class="card-text">Cardio & Endurance Trainer</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="my-5">
+
+  <!-- 📅 SCHEDULE SECTION -->
+  <section id="schedule" class="pt-5">
+    <div class="container">
+      <h2 class="text-center mb-4">Weekly Workout Schedule</h2>
+      <table class="table table-bordered text-center">
+        <thead class="table-dark">
+          <tr>
+            <th>Day</th>
+            <th>Time</th>
+            <th>Class</th>
+            <th>Trainer</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Monday</td><td>8:00 AM</td><td>Yoga</td><td>Alex</td></tr>
+          <tr><td>Tuesday</td><td>6:00 PM</td><td>Strength</td><td>Maria</td></tr>
+          <tr><td>Wednesday</td><td>5:00 PM</td><td>Cardio</td><td>Daniel</td></tr>
+          <tr><td>Thursday</td><td>7:00 AM</td><td>Yoga</td><td>Alex</td></tr>
+          <tr><td>Friday</td><td>6:00 PM</td><td>Strength</td><td>Maria</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <hr class="my-5">
+
+  <!-- 📝 REGISTER SECTION -->
+  <section id="register" class="pt-5">
+    <div class="container">
+      <h2 class="text-center mb-4">Register for a Free Trial</h2>
+      <form id="registerForm" class="w-50 mx-auto">
+        <div class="mb-3">
+          <label class="form-label">Full Name</label>
+          <input type="text" class="form-control" id="name">
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Email</label>
+          <input type="email" class="form-control" id="email">
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Preferred Class</label>
+          <select class="form-select" id="class">
+            <option value="">Select</option>
+            <option>Yoga</option>
+            <option>Strength</option>
+            <option>Cardio</option>
+          </select>
+        </div>
+        <button type="submit" class="btn btn-primary w-100">Submit</button>
+      </form>
+    </div>
+  </section>
+
+  <hr class="my-5">
+
+  <!-- 📧 CONTACT SECTION -->
+  <section id="contact" class="pt-5 mb-5">
+    <div class="container">
+      <h2 class="text-center mb-4">Contact Us</h2>
+      <form class="w-50 mx-auto">
+        <div class="mb-3">
+          <label class="form-label">Name</label>
+          <input type="text" class="form-control">
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Email</label>
+          <input type="email" class="form-control">
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Message</label>
+          <textarea class="form-control" rows="3"></textarea>
+        </div>
+        <button class="btn btn-success w-100">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="text-center bg-dark text-light p-3">
+    <p>&copy; 2025 Fitness Studio | Designed by Your Name</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+   <!-- ✅ Internal JS (from script.js) -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const form = document.getElementById('registerForm');
+      if (form) {
+        form.addEventListener('submit', function(event) {
+          event.preventDefault();
+          alert('🎉 Thank you for registering! We will contact you soon.');
+          form.reset();
+        });
+      }
+    });
+  </script>
+</body>
+</html>
